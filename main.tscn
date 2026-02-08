@@ -4,10 +4,10 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
 material = ExtResource("1_ig7tw")
-size = Vector3(50, 1, 50)
+size = Vector3(500, 1, 500)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
-size = Vector3(50, 1, 50)
+size = Vector3(500, 1, 500)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sun_angle_max = 39.32
@@ -36,8 +36,23 @@ shape = SubResource("BoxShape3D_1bvp3")
 environment = SubResource("Environment_1bvp3")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Enviroment" unique_id=651423295]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.428001, 4.133003, -10.015588)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.428001, -1.8669968, -9.015588)
 size = Vector3(10, 10, 10)
+material = ExtResource("1_ig7tw")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Enviroment" unique_id=1306201592]
+transform = Transform3D(-4.222196e-08, 1.131334e-08, 1, 0.25881904, 0.9659258, 0, -0.9659258, 0.25881904, -4.371139e-08, -10.625847, -0.76643324, -28.98031)
+size = Vector3(22, 7, 10)
+material = ExtResource("1_ig7tw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Enviroment" unique_id=218076681]
+transform = Transform3D(-0.8913944, 0.45322832, -8.729902e-08, 0.45322832, 0.89139456, -4.650019e-09, 7.571035e-08, -4.371139e-08, -1.0000001, -25.875847, -0.9314971, -16.48031)
+size = Vector3(22, 12, 15)
+material = ExtResource("1_ig7tw")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Enviroment" unique_id=494259886]
+transform = Transform3D(-0.9652723, -0.26124597, -8.7422784e-08, -0.26124585, 0.9652724, 1.3877788e-17, 8.438679e-08, 2.2838838e-08, -1.0000001, -43.469646, 0.3829986, -16.48031)
+size = Vector3(25.09961, 11.887573, 15)
 material = ExtResource("1_ig7tw")
 
 [node name="Light" type="Node" parent="." unique_id=492009032]
@@ -51,3 +66,6 @@ shadow_enabled = true
 [node name="Camera3D" type="Camera3D" parent="Cameras" unique_id=1525109972]
 transform = Transform3D(1, 0, 0, 0, 0.516638, 0.856204, 0, -0.856204, 0.516638, 0, 15.677363, 13.708041)
 fov = 90.0
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="." unique_id=85202302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.7774143)
