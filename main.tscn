@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://do14c5vekawr7"]
+
+[ext_resource type="Material" uid="uid://6wpv5irmsl6c" path="res://assets/shaders/prototype_dark.tres" id="1_ig7tw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
+material = ExtResource("1_ig7tw")
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
+sun_angle_max = 39.32
+
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_mode = 2
+sky = SubResource("Sky_h2yge")
+
+[node name="Node3D" type="Node3D" unique_id=1304365443]
+
+[node name="Enviroment" type="Node" parent="." unique_id=1973075150]
+
+[node name="floor" type="StaticBody3D" parent="Enviroment" unique_id=660666699]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Enviroment/floor" unique_id=1177961171]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/floor" unique_id=358505409]
+visible = false
+shape = SubResource("BoxShape3D_1bvp3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Enviroment" unique_id=189909491]
+environment = SubResource("Environment_1bvp3")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Enviroment" unique_id=651423295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.428001, 4.133003, -10.015588)
+size = Vector3(10, 10, 10)
+material = ExtResource("1_ig7tw")
+
+[node name="Light" type="Node" parent="." unique_id=492009032]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Light" unique_id=1451347467]
+transform = Transform3D(-0.7303799, -0.4150827, 0.5424496, 0.0062360475, 0.79008293, 0.6129682, -0.6830128, 0.45108247, -0.5744723, 7.9309816, 15.677363, 13.708041)
+shadow_enabled = true
+
+[node name="Cameras" type="Node" parent="." unique_id=1208851548]
+
+[node name="Camera3D" type="Camera3D" parent="Cameras" unique_id=1525109972]
+transform = Transform3D(1, 0, 0, 0, 0.516638, 0.856204, 0, -0.856204, 0.516638, 0, 15.677363, 13.708041)
+fov = 90.0
