@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dlxh2fnc6jsv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyw2o"]
+size = Vector3(1, 0.5, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yotxw"]
+size = Vector3(0.2, 0.2, 0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qyw2o"]
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.2
+
+[node name="Car" type="VehicleBody3D" unique_id=841201649]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=629439323]
+mesh = SubResource("BoxMesh_qyw2o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=920081769]
+shape = SubResource("BoxShape3D_yotxw")
+
+[node name="Wheel_fl" type="VehicleWheel3D" parent="." unique_id=1162650639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5538733, 0, 0.7464156)
+wheel_radius = 0.4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel_fl" unique_id=969170636]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_qyw2o")
+
+[node name="Wheel_fr" type="VehicleWheel3D" parent="." unique_id=1961362233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59835887, 0, 0.7464156)
+wheel_radius = 0.4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel_fr" unique_id=2120484233]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_qyw2o")
+
+[node name="Wheel_br" type="VehicleWheel3D" parent="." unique_id=451931034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59835887, 0, -0.7821417)
+wheel_radius = 0.4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel_br" unique_id=932010369]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_qyw2o")
+
+[node name="Wheel_bl" type="VehicleWheel3D" parent="." unique_id=1238980010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5724509, 0, -0.7821417)
+wheel_radius = 0.4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel_bl" unique_id=1818331808]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_qyw2o")
